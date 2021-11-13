@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">KaziBora</string>
+    <string name="haveAccount">Already Have Account? Sign in</string>
+    <string name="NotAccount">Do not Have Account? Register</string>
+</resources>

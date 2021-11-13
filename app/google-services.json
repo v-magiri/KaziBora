@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "354227289601",
+    "project_id": "kazibora-ddd8c",
+    "storage_bucket": "kazibora-ddd8c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:354227289601:android:edf3657b4e07f230ac4a00",
+        "android_client_info": {
+          "package_name": "com.magiri.KaziBora"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "354227289601-duok0v06ke5s6c42sj2lin2enn1iq7kj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDemzT_S9Ud8JEPOpw3psdtsy7EF2fR4iA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "354227289601-duok0v06ke5s6c42sj2lin2enn1iq7kj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
