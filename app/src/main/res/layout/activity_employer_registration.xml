@@ -59,7 +59,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Phone  Number"
-                    android:inputType="textPhonetic"
+                    android:inputType="phone"
                     android:paddingLeft="20dp" />
 
                 <EditText
@@ -74,7 +74,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/repeatPassEditTxt"
                     android:paddingLeft="20dp"
-                    android:inputType="phone"
+                    android:inputType="textPassword"
                     android:hint="Retype Password"/>
                 <TextView
                     android:layout_width="match_parent"

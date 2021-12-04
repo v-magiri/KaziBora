@@ -2,4 +2,10 @@
     <string name="app_name">KaziBora</string>
     <string name="haveAccount">Already Have Account? Sign in</string>
     <string name="NotAccount">Do not Have Account? Register</string>
+    <string name="title_activity_employer_landing_page">Employer_Landing_Page</string>
+    <string name="tab_text_1">Create</string>
+    <string name="tab_text_2">Modify</string>
+    <string name="title_activity_employee_landing_page">Employee_LandingPage</string>
+    <string name="task_title">Enter the task Title</string>
+    <string name="task_desc">Enter the task Description</string>
 </resources>

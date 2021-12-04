@@ -7,6 +7,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import Employee.EmployeeLogin;
+import Employer.EmployerLogin;
+
 public class MainActivity extends AppCompatActivity {
     private Button EmployerBtn,EmployeeBtn;
     @Override
@@ -19,14 +22,14 @@ public class MainActivity extends AppCompatActivity {
         EmployerBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(),EmployerLogin.class));
+                startActivity(new Intent(getApplicationContext(), EmployerLogin.class));
             }
         });
 
         EmployeeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(),EmployeeLogin.class));
+                startActivity(new Intent(getApplicationContext(), EmployeeLogin.class));
             }
         });
 

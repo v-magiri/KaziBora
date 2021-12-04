@@ -4,6 +4,92 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".EmployerHome">
+    tools:context="Employer.EmployerHome">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:orientation="horizontal"
+        android:weightSum="10"
+        app:layout_constraintTop_toTopOf="parent">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/create"
+            android:text="Create"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_weight="4.5"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:layout_margin="10dp"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/modify"
+            android:text="Modify"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_weight="4.5"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:layout_margin="10dp"/>
+
+        <Button
+            android:id="@+id/buttonLogout"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginVertical="8dp"
+            android:gravity="end"
+            android:background="@drawable/icon_logout" />
+
+    </LinearLayout>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:id="@+id/cardView"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginHorizontal="20sp">
+
+                <EditText
+                    android:id="@+id/taskTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:layout_margin="20dp"
+                    android:hint="@string/task_title"
+                    android:inputType="text"/>
+
+                <EditText
+                    android:id="@+id/editTxtDesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:layout_margin="20dp"
+                    android:hint="@string/task_desc"
+                    android:gravity="start|top"
+                    android:inputType="textMultiLine" />
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Create Task"
+                    android:id="@+id/createBtn"
+                    android:layout_margin="20dp"
+                    android:layout_gravity="center_horizontal"/>
+
+            </LinearLayout>
+
+        </ScrollView>
+    </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

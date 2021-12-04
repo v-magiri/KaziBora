@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.magiri.KaziBora">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/icon_kazi_bora"
@@ -10,22 +12,22 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.KaziBora">
         <activity
-            android:name=".EmployeeHome"
+            android:name="Employee.EmployeeHome"
             android:exported="true" />
         <activity
-            android:name=".EmployerRegistration"
+            android:name="Employer.EmployerRegistration"
             android:exported="true" />
         <activity
-            android:name=".EmployerHome"
+            android:name="Employer.EmployerHome"
             android:exported="true" />
         <activity
-            android:name=".EmployerLogin"
+            android:name="Employer.EmployerLogin"
             android:exported="true" />
         <activity
-            android:name=".EmployeeLogin"
+            android:name="Employee.EmployeeLogin"
             android:exported="true" />
         <activity
-            android:name=".EmployeeRegistration"
+            android:name="Employee.EmployeeRegistration"
             android:exported="true" />
         <activity
             android:name=".MainActivity"
