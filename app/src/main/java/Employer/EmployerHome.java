@@ -11,7 +11,7 @@ import android.widget.EditText;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
-import com.magiri.KaziBora.Employer;
+//import com.magiri.KaziBora.Employer;
 import com.magiri.KaziBora.R;
 import com.shashank.sony.fancytoastlib.FancyToast;
 
@@ -37,6 +37,7 @@ public class EmployerHome extends AppCompatActivity {
             public void onClick(View v) {
             FirebaseAuth.getInstance().signOut();
             startActivity(new Intent(getApplicationContext(),EmployerLogin.class));
+            finish();
             }
         });
 

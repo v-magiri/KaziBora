@@ -3,6 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/employee_background.xml" value="0.24947916666666667" />
+        <entry key="app/src/main/res/drawable/employer_background.xml" value="0.24947916666666667" />
+        <entry key="app/src/main/res/drawable/kazi_bora_background.xml" value="0.24947916666666667" />
         <entry key="app/src/main/res/layout/activity_employee_home.xml" value="0.26197916666666665" />
         <entry key="app/src/main/res/layout/activity_employee_landing_page.xml" value="0.2" />
         <entry key="app/src/main/res/layout/activity_employee_login.xml" value="0.26197916666666665" />
@@ -14,7 +17,7 @@
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.2164855072463768" />
         <entry key="app/src/main/res/layout/fragment_employee__landing_page.xml" value="0.22916666666666666" />
         <entry key="app/src/main/res/layout/fragment_employer__landing__page.xml" value="0.10729166666666666" />
-        <entry key="app/src/main/res/layout/list_item.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/list_item.xml" value="0.264" />
       </map>
     </option>
   </component>

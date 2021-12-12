@@ -48,7 +48,7 @@ public class EmployeeLogin extends AppCompatActivity {
         registerTextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), EmployerRegistration.class));
+                startActivity(new Intent(getApplicationContext(), EmployeeRegistration.class));
             }
         });
     }
@@ -75,7 +75,7 @@ public class EmployeeLogin extends AppCompatActivity {
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if(task.isSuccessful()){
                         Toast.makeText(getApplicationContext(),"Successfully Logged In",Toast.LENGTH_LONG).show();
-                        startActivity(new Intent(getApplicationContext(), EmployerHome.class));
+                        startActivity(new Intent(getApplicationContext(), EmployeeHome.class));
                     }
                 }
             }).addOnFailureListener(new OnFailureListener() {

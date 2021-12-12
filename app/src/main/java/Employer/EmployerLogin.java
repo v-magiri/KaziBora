@@ -17,7 +17,7 @@ import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.magiri.KaziBora.Employer;
+//import com.magiri.KaziBora.Employer;
 import com.magiri.KaziBora.R;
 
 public class EmployerLogin extends AppCompatActivity {
@@ -47,6 +47,7 @@ public class EmployerLogin extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(),EmployerRegistration.class));
+                finish();
             }
         });
     }

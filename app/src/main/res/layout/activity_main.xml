@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@drawable/kazi_bora_background">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -14,12 +15,14 @@
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginVertical="20dp"
         android:layout_marginHorizontal="15dp"
-        android:orientation="horizontal">
+        android:orientation="vertical">
+
             <androidx.cardview.widget.CardView
-                android:layout_width="180dp"
+                android:layout_width="match_parent"
                 app:cardCornerRadius="20dp"
                 android:backgroundTint="@color/teal_700"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp">
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -34,11 +37,11 @@
                     android:layout_margin="10dp"
                     tools:layout_editor_absoluteX="44dp"
                     tools:layout_editor_absoluteY="297dp" />
-                    <ImageView
-                        android:layout_width="150dp"
-                        android:layout_height="100dp"
-                        android:layout_gravity="center"
-                        android:src="@drawable/employer"/>
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@drawable/employer"/>
 
                 <Button
                     android:layout_marginTop="10dp"
@@ -50,7 +53,7 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
-            android:layout_width="180dp"
+            android:layout_width="match_parent"
             app:cardCornerRadius="20dp"
             android:layout_marginLeft="10dp"
             android:backgroundTint="@color/teal_200"
@@ -70,8 +73,8 @@
                     tools:layout_editor_absoluteX="44dp"
                     tools:layout_editor_absoluteY="297dp" />
                 <ImageView
-                    android:layout_width="150dp"
-                    android:layout_height="100dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:src="@drawable/employee"/>
 
