@@ -14,17 +14,19 @@ import java.util.ArrayList;
 public class HelperAdapter extends RecyclerView.Adapter<HelperAdapter.ViewHolder> {
     Context context;
     ArrayList<Task> task;
+    private TaskClickListener taskOnClickListener;
 
-    public HelperAdapter(Context context, ArrayList<Task> task) {
+    public HelperAdapter(Context context, ArrayList<Task> task,TaskClickListener taskOnClickListener) {
         this.context = context;
         this.task = task;
+        this.taskOnClickListener=taskOnClickListener;
     }
 
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view= LayoutInflater.from(context).inflate(R.layout.list_item,parent,false);
-        return new ViewHolder(view);
+        return new ViewHolder(view,taskOnClickListener);
     }
 
     @Override
@@ -40,12 +42,20 @@ public class HelperAdapter extends RecyclerView.Adapter<HelperAdapter.ViewHolder
         return task.size();
     }
 
-    public static class ViewHolder extends RecyclerView.ViewHolder{
+    public static class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         TextView taskTitle,taskDescription;
-        public ViewHolder(@NonNull View itemView) {
+        TaskClickListener taskClickListener;
+        public ViewHolder(@NonNull View itemView,TaskClickListener taskClickListener) {
             super(itemView);
             taskTitle = itemView.findViewById(R.id.taskTxt);
             taskDescription = itemView.findViewById(R.id.descTxt);
+            this.taskClickListener=taskClickListener;
+            itemView.setOnClickListener(this);
+        }
+
+        @Override
+        public void onClick(View v) {
+            taskClickListener.onTaskClick(getAdapterPosition());
         }
     }
     public interface TaskClickListener{

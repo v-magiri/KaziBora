@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.KaziBora">
         <activity
+            android:name="Employee.Task_Description"
+            android:exported="true" />
+        <activity
             android:name="Employee.EmployeeHome"
             android:exported="true" />
         <activity

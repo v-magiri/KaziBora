@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="Employee.Task_Description"
+    android:background="@drawable/employee_background">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="20dp"
+        android:elevation="30dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="20dp"
+        android:padding="20dp">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/task_title"
+                    android:textSize="25sp"
+                    android:layout_marginVertical="20dp"
+                    android:id="@+id/titleTxt"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:gravity="center"/>
+
+                <EditText
+                    android:id="@+id/desc_editTxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:text="@string/task_desc"
+                    android:textColor="@color/black"
+                    android:gravity="start|top"
+                    android:inputType="textMultiLine"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:clickable="false"/>
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginVertical="20dp"
+                    android:text="Bind Task"
+                    android:textSize="20sp"
+                    android:id="@+id/bindBtn"
+                    android:layout_gravity="center"/>
+
+
+            </LinearLayout>
+        </ScrollView>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

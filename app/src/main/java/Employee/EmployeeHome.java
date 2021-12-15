@@ -2,6 +2,7 @@ package Employee;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
@@ -25,11 +26,12 @@ import java.util.HashMap;
 
 import Employer.EmployerLogin;
 
-public class EmployeeHome extends AppCompatActivity {
+public class EmployeeHome extends AppCompatActivity implements HelperAdapter.TaskClickListener {
     private RecyclerView recyclerView;
     HelperAdapter helperAdapter;
     private Button signOutBtn,taskBtn;
     ArrayList<Task> tasks;
+    private static final String TAG = "Kazi Bora";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,7 +44,7 @@ public class EmployeeHome extends AppCompatActivity {
         taskBtn=findViewById(R.id.taskButton);
         signOutBtn=findViewById(R.id.buttonLogout);
         DatabaseReference mRef = FirebaseDatabase.getInstance().getReference("Task");
-        helperAdapter = new HelperAdapter(this, tasks);
+        helperAdapter = new HelperAdapter(this, tasks,this);
         recyclerView.setAdapter(helperAdapter);
 
         //signingout the user
@@ -73,4 +75,18 @@ public class EmployeeHome extends AppCompatActivity {
             }
         });
     }
+
+    @Override
+    public void onTaskClick(int position) {
+        Task selectedTask=tasks.get(position);
+        String taskTitle=selectedTask.getTaskTitle();
+        String taskDescription=selectedTask.getTaskDescription();
+        Intent intent=new Intent(getApplicationContext(),Task_Description.class);
+        Bundle bundle=new Bundle();
+        bundle.putString("Task_Title",taskTitle);
+        bundle.putString("Task_Description",taskDescription);
+        intent.putExtras(bundle);
+        startActivity(intent);
+        Log.d(TAG, "onTaskClick: Item Clicked "+taskTitle+" "+taskDescription);}
+
 }
